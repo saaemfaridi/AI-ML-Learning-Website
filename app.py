@@ -23,4 +23,4 @@ def videos():
     return render_template('videos.html')
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(host='0.0.0.0', port=10000)  # Render uses port 10000
