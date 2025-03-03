@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Home - AI/ML Learning Platform{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section text-center py-5 mb-5">
+    <h1 class="display-4 mb-4">Welcome to Your AI/ML Learning Journey</h1>
+    <p class="lead mb-4">Master Machine Learning and Artificial Intelligence from basics to advanced concepts</p>
+    <div class="d-flex justify-content-center gap-3">
+        <a href="/introduction" class="btn btn-primary btn-lg">Get Started</a>
+        <a href="/roadmap" class="btn btn-outline-primary btn-lg">View Roadmap</a>
+    </div>
+</div>
+
+<!-- Featured Sections -->
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Fundamentals</h5>
+                <p class="card-text">Start with the basics of AI and ML. Learn about data preprocessing, algorithms, and mathematical foundations.</p>
+                <a href="/introduction" class="btn btn-outline-primary">Learn Basics</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Learning Resources</h5>
+                <p class="card-text">Access curated learning materials, tutorials, and documentation from top platforms and educators.</p>
+                <a href="/resources" class="btn btn-outline-primary">Browse Resources</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Video Tutorials</h5>
+                <p class="card-text">Watch comprehensive video tutorials and courses on various AI/ML topics.</p>
+                <a href="/videos" class="btn btn-outline-primary">Watch Videos</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Latest Updates Section -->
+<div class="latest-updates mb-5">
+    <h2 class="mb-4">Latest in AI/ML</h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Deep Learning Fundamentals</h5>
+                    <p class="card-text">Explore neural networks, backpropagation, and modern architectures.</p>
+                    <a href="/resources#deep-learning" class="btn btn-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Machine Learning Projects</h5>
+                    <p class="card-text">Get hands-on experience with real-world ML projects.</p>
+                    <a href="/resources#projects" class="btn btn-link">View Projects →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
