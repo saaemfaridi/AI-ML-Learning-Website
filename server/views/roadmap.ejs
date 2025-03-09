@@ -1,0 +1,217 @@
+<%- include('partials/header', { title: title }) %>
+
+<!-- Roadmap Header -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="display-4 fw-bold mb-4">AI & ML Learning Roadmap</h1>
+                <p class="lead mb-4">
+                    Follow this structured learning path to master Artificial Intelligence and Machine Learning.
+                    From fundamentals to advanced concepts, we've got you covered.
+                </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <svg width="100%" height="300" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="img-fluid rounded-lg shadow-lg">
+                    <rect width="800" height="600" fill="#f3f4f6"/>
+                    
+                    <!-- Roadmap Path -->
+                    <path d="M150 300 C 250 150, 350 450, 450 150 C 550 450, 650 150, 750 300" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="0,0" fill="none"/>
+                    
+                    <!-- Milestone Points -->
+                    <circle cx="150" cy="300" r="25" fill="#4f46e5"/>
+                    <circle cx="300" cy="250" r="25" fill="#4f46e5"/>
+                    <circle cx="450" cy="150" r="25" fill="#4f46e5"/>
+                    <circle cx="600" cy="250" r="25" fill="#4f46e5"/>
+                    <circle cx="750" cy="300" r="25" fill="#4f46e5"/>
+                    
+                    <!-- Milestone Labels -->
+                    <text x="150" y="350" font-family="Arial" font-size="16" fill="#4f46e5" text-anchor="middle">Basics</text>
+                    <text x="300" y="300" font-family="Arial" font-size="16" fill="#4f46e5" text-anchor="middle">Python</text>
+                    <text x="450" y="200" font-family="Arial" font-size="16" fill="#4f46e5" text-anchor="middle">ML Fundamentals</text>
+                    <text x="600" y="300" font-family="Arial" font-size="16" fill="#4f46e5" text-anchor="middle">Deep Learning</text>
+                    <text x="750" y="350" font-family="Arial" font-size="16" fill="#4f46e5" text-anchor="middle">Advanced AI</text>
+                    
+                    <!-- Decorative Elements -->
+                    <circle cx="150" cy="300" r="15" fill="white"/>
+                    <circle cx="300" cy="250" r="15" fill="white"/>
+                    <circle cx="450" cy="150" r="15" fill="white"/>
+                    <circle cx="600" cy="250" r="15" fill="white"/>
+                    <circle cx="750" cy="300" r="15" fill="white"/>
+                    
+                    <circle cx="150" cy="300" r="8" fill="#4f46e5"/>
+                    <circle cx="300" cy="250" r="8" fill="#4f46e5"/>
+                    <circle cx="450" cy="150" r="8" fill="#4f46e5"/>
+                    <circle cx="600" cy="250" r="8" fill="#4f46e5"/>
+                    <circle cx="750" cy="300" r="8" fill="#4f46e5"/>
+                    
+                    <!-- Title -->
+                    <text x="400" y="500" font-family="Arial" font-size="30" font-weight="bold" fill="#4f46e5" text-anchor="middle">Learning Roadmap</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Roadmap Timeline -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="h1 mb-5 text-center">Learning Roadmap</h2>
+        
+        <div class="roadmap position-relative">
+            <div class="roadmap-line"></div>
+            
+            <!-- Beginner Section -->
+            <div class="roadmap-item" id="beginner">
+                <div class="roadmap-content">
+                    <span class="badge bg-primary mb-3">Beginner</span>
+                    <h3 class="h4 mb-3">Foundations of AI/ML</h3>
+                    <p class="mb-4">Start your journey with the fundamental concepts and tools needed for AI and ML.</p>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">1. Python Programming</h4>
+                            <p class="text-muted mb-3">Learn the basics of Python, the most popular language for AI/ML development.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">2. Mathematics for ML</h4>
+                            <p class="text-muted mb-3">Master the essential math concepts: linear algebra, calculus, and statistics.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">3. Data Analysis with Pandas</h4>
+                            <p class="text-muted mb-3">Learn to manipulate, analyze, and visualize data using Python libraries.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Intermediate Section -->
+            <div class="roadmap-item" id="intermediate">
+                <div class="roadmap-content">
+                    <span class="badge bg-info mb-3">Intermediate</span>
+                    <h3 class="h4 mb-3">Applied Machine Learning</h3>
+                    <p class="mb-4">Dive deeper into machine learning algorithms and start applying them to real-world problems.</p>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">1. Supervised Learning</h4>
+                            <p class="text-muted mb-3">Master classification and regression algorithms like decision trees and SVMs.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">2. Unsupervised Learning</h4>
+                            <p class="text-muted mb-3">Explore clustering, dimensionality reduction, and other unsupervised techniques.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">3. Model Evaluation</h4>
+                            <p class="text-muted mb-3">Learn techniques to evaluate, validate, and improve your machine learning models.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advanced Section -->
+            <div class="roadmap-item" id="advanced">
+                <div class="roadmap-content">
+                    <span class="badge bg-success mb-3">Advanced</span>
+                    <h3 class="h4 mb-3">Deep Learning</h3>
+                    <p class="mb-4">Master neural networks, deep learning frameworks, and advanced model architectures.</p>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">1. Neural Networks</h4>
+                            <p class="text-muted mb-3">Understand the fundamentals of neural networks and backpropagation.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">2. Deep Learning Frameworks</h4>
+                            <p class="text-muted mb-3">Learn to use TensorFlow and PyTorch for building deep learning models.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">3. Computer Vision & NLP</h4>
+                            <p class="text-muted mb-3">Apply deep learning to computer vision and natural language processing tasks.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Expert Section -->
+            <div class="roadmap-item" id="expert">
+                <div class="roadmap-content">
+                    <span class="badge bg-warning mb-3">Expert</span>
+                    <h3 class="h4 mb-3">Specializations</h3>
+                    <p class="mb-4">Specialize in cutting-edge areas like NLP, computer vision, reinforcement learning, and more.</p>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">1. Reinforcement Learning</h4>
+                            <p class="text-muted mb-3">Master the techniques that power AI systems like AlphaGo and autonomous vehicles.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">2. Generative Models</h4>
+                            <p class="text-muted mb-3">Explore GANs, VAEs, and other generative models for creating new content.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="h5 mb-2">3. AI Ethics & Deployment</h4>
+                            <p class="text-muted mb-3">Learn about ethical considerations and how to deploy AI systems in production.</p>
+                            <a href="/resources" class="btn btn-sm btn-primary">View Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white text-center">
+    <div class="container py-4">
+        <h2 class="h1 mb-4">Ready to Start Your Journey?</h2>
+        <p class="lead mb-5 mx-auto" style="max-width: 700px;">
+            Begin your AI/ML learning journey today. Follow our structured roadmap and explore resources to master new skills.
+        </p>
+        <div class="d-flex gap-3 justify-content-center">
+            <a href="/introduction" class="btn btn-light">
+                <i class="fas fa-rocket me-2"></i> Start Learning
+            </a>
+            <a href="/resources" class="btn btn-outline-light">
+                <i class="fas fa-book me-2"></i> Explore Resources
+            </a>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %> 

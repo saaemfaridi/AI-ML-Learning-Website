@@ -1,0 +1,24 @@
+{
+  "name": "ai-ml-learning-website",
+  "version": "1.0.0",
+  "description": "An improved AI/ML Learning Platform built with Node.js",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js",
+    "install": "cd server && npm install"
+  },
+  "keywords": [
+    "ai",
+    "ml",
+    "learning",
+    "education",
+    "node",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+} 

@@ -36,12 +36,11 @@ npm run dev
 
 ## Project Structure
 
-- `/server` - Main Node.js application
-  - `/routes` - Express route handlers
-  - `/controllers` - Business logic
-  - `/models` - Data models (for future database integration)
-  - `/views` - EJS templates
-  - `/public` - Static assets (CSS, JavaScript, images)
+- `/routes` - Express route handlers
+- `/controllers` - Business logic
+- `/models` - Data models (for future database integration)
+- `/views` - EJS templates
+- `/public` - Static assets (CSS, JavaScript, images)
 
 ## Contributing
 
@@ -49,4 +48,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the ISC License.
+This project is licensed under the ISC License. 

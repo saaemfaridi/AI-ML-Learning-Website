@@ -1,0 +1,225 @@
+<%- include('partials/header', { title: title }) %>
+
+<!-- Videos Header -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="display-4 fw-bold mb-4">AI & ML Video Tutorials</h1>
+                <p class="lead mb-4">
+                    Watch expert-led video tutorials covering essential AI and Machine Learning concepts.
+                    Visual learning to accelerate your understanding.
+                </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <svg width="100%" height="300" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="img-fluid rounded-lg shadow-lg">
+                    <rect width="800" height="600" fill="#f3f4f6"/>
+                    
+                    <!-- Video Player Background -->
+                    <rect x="200" y="150" width="400" height="250" rx="10" fill="#4f46e5" fill-opacity="0.1" stroke="#4f46e5" stroke-width="3"/>
+                    
+                    <!-- Video Screen -->
+                    <rect x="220" y="170" width="360" height="180" rx="5" fill="#4f46e5" fill-opacity="0.05" stroke="#4f46e5" stroke-width="2"/>
+                    
+                    <!-- Play Button -->
+                    <circle cx="400" cy="260" r="40" fill="#4f46e5" fill-opacity="0.9"/>
+                    <path d="M390 240L420 260L390 280Z" fill="white"/>
+                    
+                    <!-- Video Controls -->
+                    <rect x="220" y="370" width="360" height="10" rx="5" fill="#4f46e5" fill-opacity="0.3"/>
+                    <circle cx="300" cy="375" r="8" fill="#4f46e5"/>
+                    
+                    <!-- Control Buttons -->
+                    <circle cx="250" cy="375" r="12" fill="#4f46e5" fill-opacity="0.7"/>
+                    <rect x="245" y="370" width="10" height="10" fill="white"/>
+                    
+                    <circle cx="550" cy="375" r="12" fill="#4f46e5" fill-opacity="0.7"/>
+                    <path d="M545 370L555 375L545 380Z" fill="white"/>
+                    
+                    <!-- Video Thumbnails -->
+                    <rect x="150" y="450" width="120" height="80" rx="5" fill="#4f46e5" fill-opacity="0.5"/>
+                    <rect x="290" y="450" width="120" height="80" rx="5" fill="#4f46e5" fill-opacity="0.6"/>
+                    <rect x="430" y="450" width="120" height="80" rx="5" fill="#4f46e5" fill-opacity="0.7"/>
+                    <rect x="570" y="450" width="120" height="80" rx="5" fill="#4f46e5" fill-opacity="0.8"/>
+                    
+                    <!-- Title -->
+                    <text x="400" y="120" font-family="Arial" font-size="30" font-weight="bold" fill="#4f46e5" text-anchor="middle">Video Tutorials</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Video -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="h1 mb-4" data-aos="fade-up">Featured Tutorial</h2>
+        <div class="row">
+            <div class="col-lg-8" data-aos="fade-up">
+                <div class="card mb-4">
+                    <div class="aspect-video">
+                        <iframe src="https://www.youtube.com/embed/aircAruvnKk" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                class="w-100 h-100">
+                        </iframe>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h4 mb-2">Neural Networks Explained</h3>
+                        <p class="text-muted mb-3">A comprehensive explanation of how neural networks work, from basic concepts to advanced architectures.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">Beginner</span>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-clock me-1"></i>
+                                <span>45 mins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h4 mb-3">Why Watch This?</h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Clear explanations of complex concepts</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Visual demonstrations of neural networks</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Step-by-step walkthrough of backpropagation</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Practical examples and applications</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> No advanced math required</li>
+                        </ul>
+                        <a href="https://www.youtube.com/watch?v=aircAruvnKk" class="btn btn-primary w-100" target="_blank">
+                            <i class="fab fa-youtube me-2"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Filters -->
+<section class="py-4">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" data-aos="fade-up">
+            <button class="btn btn-primary video-filter-btn active" data-category="all">All Videos</button>
+            <button class="btn btn-outline-white video-filter-btn" data-category="Beginner">Beginner</button>
+            <button class="btn btn-outline-white video-filter-btn" data-category="Intermediate">Intermediate</button>
+            <button class="btn btn-outline-white video-filter-btn" data-category="Advanced">Advanced</button>
+        </div>
+        
+        <div class="video-grid" data-aos="fade-up">
+            <% videos.forEach(video => { %>
+                <div class="card video-card h-100" data-category="<%= video.category %>" data-video-url="<%= video.url %>">
+                    <div class="video-container aspect-video position-relative">
+                        <div class="card-img-top video-thumbnail" style="height: 100%; background-color: #f3f4f6; display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center; width: 100%; padding: 20px;">
+                                <% 
+                                let iconClass = "fas fa-video";
+                                if (video.title.includes("Neural")) {
+                                    iconClass = "fas fa-brain";
+                                } else if (video.title.includes("Python")) {
+                                    iconClass = "fab fa-python";
+                                } else if (video.title.includes("Deep Learning")) {
+                                    iconClass = "fas fa-network-wired";
+                                } else if (video.title.includes("Computer Vision")) {
+                                    iconClass = "fas fa-eye";
+                                } else if (video.title.includes("NLP") || video.title.includes("Language")) {
+                                    iconClass = "fas fa-language";
+                                }
+                                %>
+                                <i class="<%= iconClass %> fa-3x text-primary mb-3"></i>
+                                <h5 class="mb-0"><%= video.title %></h5>
+                            </div>
+                        </div>
+                        <button class="video-play-btn position-absolute top-50 start-50 translate-middle">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2"><%= video.category %></span>
+                        <h3 class="card-title"><%= video.title %></h3>
+                        <p class="card-text"><%= video.description %></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-star text-warning me-1"></i>
+                                <span><%= video.rating %>/5.0</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-clock me-1"></i>
+                                <span><%= video.duration %></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Video Playlists -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Recommended Playlists</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-brain fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Machine Learning Basics</h3>
+                        <p class="text-muted mb-4">A comprehensive introduction to machine learning concepts, algorithms, and applications.</p>
+                        <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" class="btn btn-outline-white" target="_blank">View Playlist</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-code fa-3x text-secondary"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Python for Data Science</h3>
+                        <p class="text-muted mb-4">Learn Python programming specifically for data science and machine learning applications.</p>
+                        <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU" class="btn btn-outline-white" target="_blank">View Playlist</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-project-diagram fa-3x text-accent"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Deep Learning Projects</h3>
+                        <p class="text-muted mb-4">Step-by-step tutorials for building real-world deep learning projects from scratch.</p>
+                        <a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDdeMyHEYc0gxFpYwHY2Qfdh" class="btn btn-outline-white" target="_blank">View Playlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white text-center">
+    <div class="container py-4">
+        <h2 class="h1 mb-4" data-aos="fade-up">Ready to Create Your Own AI/ML Projects?</h2>
+        <p class="lead mb-5 mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
+            After watching these tutorials, you'll be ready to start building your own AI and ML projects.
+            Apply what you've learned and create something amazing!
+        </p>
+        <div class="d-flex gap-3 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <a href="/resources" class="btn btn-light">
+                <i class="fas fa-book me-2"></i> Explore Resources
+            </a>
+            <a href="/roadmap" class="btn btn-outline-light">
+                <i class="fas fa-map me-2"></i> View Learning Roadmap
+            </a>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %> 

@@ -1,0 +1,3 @@
+@echo off
+echo Starting AI/ML Learning Hub...
+node server/app.js 
